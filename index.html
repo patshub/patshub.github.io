@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>FCS</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="icon" href="img/me.jpg">
+        
+		<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                
+        <!--    BOOSTRAP CSS     -->
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        
+        <!--    CUSTOM CSS     -->
+        <link href="css/custom.css" type="text/css" rel="stylesheet">
+        
+        <!--    FCS CSS     -->
+        <link href="css/fcs.css" type="text/css" rel="stylesheet">
+        
+        <!--    FCS img CSS     -->
+        <link href="css/img.css" type="text/css" rel="stylesheet">
+        
+        <!--    RESPONSIVE CSS     -->
+        <link href="css/responsive.css" type="text/css" rel="stylesheet">
+        
+        <!--    FCS Button CSS     -->
+        <link href="css/btn.css" type="text/css" rel="stylesheet">
+        
+        <!--    FCS Navbar CSS     -->
+        <link href="css/navbar.css" type="text/css" rel="stylesheet">
+        
+	</head>
+    
+    
+    <style>
+            #site-banner
+            {
+                position: fixed;
+                
+                width: 100%;
+                height: auto;
+                
+                z-index: -1;
+            }
+            
+            
+            .site-banner-img
+            {
+                width: 100%;
+                height:1200px;
+                background-size: cover;
+            }
+            
+            #site-banner-img1
+            {
+                background-image: url(css/img/home/banners/1-dim.png);
+                background-position: 50% 10%;
+                
+                
+            }
+            #site-banner-img2
+            {
+                background-image: url(css/img/home/banners/2-dim.png);
+                background-position: 50% 0%;
+                
+                
+            }
+            #site-banner-img3
+            {
+                background-image: url(css/img/home/banners/3-dim.png);
+                background-position: 50% 0%;
+                
+                
+            }
+            #site-banner-img4
+            {
+                background-image: url(css/img/home/banners/4-dim.png);
+                background-position: 50% 0%;
+                
+                
+            }
+            #site-banner-img5
+            {
+                background-image: url(css/img/home/banners/5-dim.png);
+                background-position: 50% -10%;
+                
+                
+            }
+        </style>
+    
+    
+    <style>
+           
+
+        .mobile-mainheader
+        {
+            display: none;
+        }
+        .carousel-control-main .carousel-control
+        {
+            height: 850px;
+            
+        }
+        .carousel-control.right, .carousel-control.left
+        {
+            background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+        }
+        
+        @media only screen and (max-width: 1440px)
+        {
+            .site-banner-img
+            {
+                height: 770px;
+            }
+            
+            .carousel-control-main .carousel-control
+            {
+                margin-top: 90px;
+                height: 400px;
+            }
+
+            .container
+            {
+                width: 85%;
+            }
+            .mainheader
+            {
+                font-size: 5em;
+                margin-top: 250px;
+                margin-bottom: 180px;
+
+            }
+        }
+       
+        @media only screen and (max-width: 1199px) {
+            
+            .carousel-control-main .carousel-control
+            {
+                height: 500px;
+            }
+            
+            .mainheader
+            {
+                margin-top: 310px;
+                margin-bottom: 180px;
+                font-size: 4em;
+
+            }
+            
+        }
+        
+         @media only screen and (max-width: 768px) {
+            
+             #site-banner .mainheader
+             {
+               margin-top: 255px;
+                margin-bottom: 180px;
+
+             }
+            .carousel-control-main .carousel-control
+            {
+                height:485px;
+            }
+        
+        }
+        @media only screen and (max-width: 400px)
+        {
+            #site-banner .mainheader
+             {
+               margin-top: 215px;
+                margin-bottom: 180px;
+
+            }
+            .carousel-control-main .carousel-control
+            {
+                height:445px;
+            }
+        }
+       
+    </style>
+    
+    <script type="text/javascript">
+            function testScroll(ev){
+                if(window.pageYOffset>1000)
+                {
+                    // WEBSITE - siteheader
+                    
+                    document.getElementById('site-header-1').style.visibility = "hidden"; 
+                    document.getElementById('site-header-2').style.visibility = "hidden";  
+                    document.getElementById('site-header-3').style.visibility = "hidden"; 
+                    document.getElementById('site-header-4').style.visibility = "hidden"; 
+                    document.getElementById('site-header-5').style.visibility = "hidden";
+                    
+                    //MOBILE - siteheader
+                    
+                    document.getElementById('mobile-header-1').style.visibility = "hidden"; 
+                    document.getElementById('mobile-header-2').style.visibility = "hidden";  
+                    document.getElementById('mobile-header-3').style.visibility = "hidden"; 
+                    document.getElementById('mobile-header-4').style.visibility = "hidden"; 
+                    document.getElementById('mobile-header-5').style.visibility = "hidden"; 
+                    
+                }
+                
+                if(window.pageYOffset<=1000)
+                {
+                    
+                    // WEBSITE - siteheader
+                    document.getElementById('site-header-1').style.visibility = "visible"; 
+                    document.getElementById('site-header-2').style.visibility = "visible";  
+                    document.getElementById('site-header-3').style.visibility = "visible"; 
+                    document.getElementById('site-header-4').style.visibility = "visible"; 
+                    document.getElementById('site-header-5').style.visibility = "visible"; 
+                    
+                    //MOBILE - siteheader
+                    
+                    document.getElementById('mobile-header-1').style.visibility = "visible"; 
+                    document.getElementById('mobile-header-2').style.visibility = "visible";  
+                    document.getElementById('mobile-header-3').style.visibility = "visible"; 
+                    document.getElementById('mobile-header-4').style.visibility = "visible"; 
+                    document.getElementById('mobile-header-5').style.visibility = "visible"; 
+                }
+            }
+            window.onscroll=testScroll
+        
+        
+        </script>
+   
+	<body class="home">         
+
+        
+        
+        
+        <div id="site-banner">
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox" >
+                    <div class="item active site-banner-img" id="site-banner-img1">
+                        <div class="container ">
+                            <h1 id="site-header-1" class="mainheader textcolor-white align-center">FILIPINO CULTURAL SCHOOL</h1> <h1 id="mobile-header-1" class=" mobile-mainheader textcolor-white align-center">FCS</h1>  
+                        </div>
+                    </div>
+                    
+                    <div class="item site-banner-img" id="site-banner-img2">
+                        <div class="container ">
+                            <h1 id="site-header-2" class="mainheader textcolor-white align-center">FILIPINO CULTURAL SCHOOL</h1> <h1 id="mobile-header-2" class=" mobile-mainheader textcolor-white align-center">FCS</h1>  
+                        </div>
+                    </div>
+                    <div class="item site-banner-img" id="site-banner-img3">
+                        <div class="container ">
+                            <h1 id="site-header-3" class="mainheader textcolor-white align-center">FILIPINO CULTURAL SCHOOL</h1> <h1 id="mobile-header-3" class=" mobile-mainheader textcolor-white align-center">FCS</h1>  
+                        </div>
+                    </div>
+                    <div class="item site-banner-img" id="site-banner-img4">
+                        <div class="container ">
+                            <h1 id="site-header-4" class="mainheader textcolor-white align-center">FILIPINO CULTURAL SCHOOL</h1> <h1 id="mobile-header-4" class=" mobile-mainheader textcolor-white align-center">FCS</h1>  
+                        </div>
+                    </div>
+                    <div class="item site-banner-img" id="site-banner-img5">
+                        <div class="container ">
+                            <h1 id="site-header-5" class="mainheader textcolor-white align-center">FILIPINO CULTURAL SCHOOL</h1> <h1 id="mobile-header-5" class=" mobile-mainheader textcolor-white align-center">FCS</h1>  
+                        </div>
+                    </div>
+                    
+
+                 </div>
+            </div>
+            
+            
+        
+        </div>
+        
+        <div class="carousel-control-main">
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+        
+        
+        </div>
+        
+    
+        <nav class="navbar navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#fcsNav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+            </div>
+              
+            <div class="collapse navbar-collapse" id="fcsNav">
+              <div class="col-sm-5">
+                <ul class="nav nav-justified">
+                  <li ><a href="index.html" class="active-link">HOME</a></li>
+                  <li><a href="ourstory.html"  class="textcolor-black">OUR STORY</a></li>
+                  <li><a href="ourfamily.html"  class="textcolor-black">OUR FAMILY</a></li>
+                </ul>
+                </div>
+
+                <div class="col-sm-2 mobile-hide-logo">
+                    <img src="css/img/logo.png"/>
+                </div>
+
+                <div class="col-sm-5">
+                    <ul class="nav nav-justified">
+                      <li class=""><a href="joinus.html"  class="textcolor-black">JOIN US</a></li>
+                      <li><a href="summer.html"  class="textcolor-black">SUMMER</a></li>
+                      <li><a href="#"  class="textcolor-black">BLOG</a></li>
+                    </ul>
+                </div>
+              
+            </div>
+          </div>
+        </nav>
+        
+        <div class="clear"></div>
+        <div class="spacer-lg"></div>
+        
+        
+        <div class="story-block bgcolor-white margin-top-700px">
+            <div class="spacer-lg bgcolor-white"></div>
+            
+            <div class="container">
+                <div class="col-sm-6 padding-right-40px">
+   
+                    <img src="css/img/ourstory/whatisfcs.jpg"/>
+                    
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="pageheader textcolor-black bold-600">OUR STORY</h2>
+                    <div class="spacer-xs"></div>
+                    <p class="textcolor-black">Created in 1965 by the Sampaguita Woman’s Circle, FCS has grown to a 200+ strong organization that hopes to provide Filipino cultural education. </p>
+                    
+                    <a href="ourstory.html" class="btn button-black margin-top-20px" role="button"><h2 class="textcolor-black align-center bold-600">Learn More</h2></a>
+                    
+                                
+                </div>
+                <div class="clear"></div>                
+            </div>            
+        
+        </div>
+        
+        <div class="clear"></div>
+        <div class="spacer-lg bgcolor-white"></div>
+        
+        <div class="block bgcolor-lightgrey">
+            <div class="spacer-lg bgcolor-lightgrey"></div>
+            <div class="container triplets">
+                <div class="col-sm-4 padding-right-20px">
+                   <div class="img-triplets img_familypic roundedges-30"></div>
+                    
+                    <div class="card-info">
+                        <h2 class="pagesubheader-triplet align-center textcolor-black bold-600">FAMILY</h2>
+                        <div class="divider-yellow"></div>
+                        <p class="align-center textcolor-black">
+                            Come join our FCS family! Our goal is to develop a strong bond and connection between our students and volunteers and helping to foster a sense of identity, self-love and family.
+                        </p>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-sm-4 padding-sides-10px mobile-spacer-50px-top mobile-spacer-50px-bottom">
+                    <div class="img-triplets img_groupAonstage roundedges-30"></div>
+                    
+                    <div class="card-info">
+                        <h2 class="pagesubheader-triplet align-center textcolor-black bold-600">CULTURE</h2>
+                        <div class="divider-yellow"></div>
+                        <p class="align-center textcolor-black">
+                            Learn more about the Filipino culture! Creating a sense of Filipino pride and identity through cultural education including art, music, history, and dance.
+                        </p>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-sm-4 padding-left-20px">
+                    <div class="img-triplets img_volunteerFCSshirts roundedges-30"></div>
+                    
+                    <div class="card-info">
+                        <h2 class="pagesubheader-triplet align-center textcolor-black bold-600">SERVICE</h2>
+                        <div class="divider-yellow"></div>
+                        <p class="align-center textcolor-black">
+                           Want to get involved? Find out how to get involved to serve and educate our community
+                        </p>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="spacer-lg bgcolor-lightgrey"></div>
+        
+        </div>
+        
+        <div class="clear"></div>
+        
+        
+        
+        <div class="family-block bgcolor-white">
+            <div class="spacer-lg bgcolor-white"></div>
+            <div class="container">
+                <div class="col-sm-6 padding-right-40px">
+   
+                    <img src="css/img/ourfamily/pagebanner.jpg"/>
+                    
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="pageheader textcolor-black bold-600">OUR FAMILY</h2>
+                    <div class="spacer-xs"></div>
+                    <p class="textcolor-black">From all stages of life, FCS has a very diverse family. From students to volunteers, everyone has an opportunity to be part of this community!</p>
+                    <a href="ourfamily.html" class="btn button-black margin-top-20px" role="button"><h2 class="textcolor-black align-center bold-600">Meet Us</h2></a>
+                                
+                </div>
+                <div class="clear"></div>                
+            </div>   
+            <div class="spacer-lg bgcolor-white"></div>
+        
+        </div>
+                        
+        
+        <div class="joinus-block bgcolor-lightgrey">
+            <div class="spacer-lg "></div>
+            <div class="container">
+                <h2 class="pageheader textcolor-black align-center bold-600 mobile-nomargin">JOIN US</h2>
+                <div class="spacer-xs"></div>
+                <p class="align-center padding-sides-275px textcolor-black">Looking to be a part of the FCS family? Click the link below to learn how you can get involved!</p>
+                <div class="spacer-xs"></div>
+                <div class="text-center">
+                    <a href="joinus.html" class="btn button-black margin-top-20px" role="button"><h2 class="textcolor-black align-center bold-600">Learn More</h2></a>
+                </div>
+            </div>
+            <div class="spacer-lg"></div>
+        
+        </div>
+        
+        <div class="clear"></div>
+<!--
+        <div class="spacer-lg bgcolor-white"></div>
+                
+        <div class="block bgcolor-white">        
+            <div class="container">
+                
+                <style>.blog-icon{width:100px; display: block; margin: auto; margin-bottom: 50px;}</style>
+                <img class="blog-icon" src="css/img/icons/blogger.png"/>
+                <h2 class="pageheader-supersize textcolor-black align-center">NEWS/EVENTS</h2>
+                <div class="spacer-xs"></div>
+                <p class="align-center padding-sides-275px">Filipino Cultural School strives to educate the youth about their Filipino and Filipino American heritage through dance, music, language, history, and lifestyle classes. FCS also seeks.</p>
+                <div class="spacer-xs"></div>
+                <div class="text-center">
+                    <a href="blog.html" class="btn button-black margin-top-20px" role="button"><h2 class="textcolor-black align-center bold-600">FCS BLOG</h2></a>
+                </div>
+                
+            </div>
+        
+        </div>
+        
+        <div class="clear"></div>
+        <div class="spacer-lg bgcolor-white"></div>
+        
+-->
+        <div class="questions-block bg-img img_volunteserGather">
+            <div class="spacer-lg"></div>
+            <div class="container">
+                <h2 class="pageheader textcolor-white align-center bold-600">QUESTIONS? CONTACT US!</h2>
+                <div class="spacer-xs"></div>
+                <p class="align-center padding-sides-275px textcolor-white opacity-75">Do you have questions about this program? Feel free to contact us and we will get back to you as soon as possible!</p>
+                
+            </div>
+            <div class="spacer-lg"></div>
+        </div>
+        
+        <div class="mobile-footer-block">
+            <div class="col-sm-6 bgcolor-black padding-left-70px padding-top-40px padding-right-70px">
+                <h2 class="textcolor-white">CONTACT US</h2>
+                    
+                <div class="spacer-sm"></div>
+
+                <img class="icon_contact float-left margin-right-20px" src="css/img/icons/call.png"/><p class="textcolor-white">(714) 494-3090</p>
+                    
+                    <br/>
+                    
+                    <img class="icon_contact float-left margin-right-20px" src="css/img/icons/email.png"/><p class="textcolor-white">filipinoculturalschool@gmail.com</p>
+                    
+                    <br/>
+                    
+                    <img class="icon_contact float-left margin-right-20px" src="css/img/icons/address.png"/><p class="textcolor-white">PO Box 1993 Norwalk CA 90650</p>
+            
+            </div>
+            
+            <div class="col-sm-6 bgcolor-white padding-left-70px padding-top-40px padding-right-70px">
+                <div id="mc_embed_signup">
+                <form action="//facebook.us3.list-manage.com/subscribe/post?u=04b6a14a798f7f12ec6a139d2&amp;id=1c3c0f5aca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+
+
+                    <h2 class="textcolor-black">MAILING LIST</h2><br/>
+
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Please enter email address" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_04b6a14a798f7f12ec6a139d2_1c3c0f5aca" tabindex="-1" value=""></div>
+                    <div class="clear"><br/><br/><input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+            </div>
+            
+            </div>
+            
+            <div class="col-sm-6 donate-button bgcolor-blue padding-left-40px padding-top-100px padding-right-40px">
+                <br/><br/>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8USALBQKKVNFJ" target="_blank">
+                    <h2 class="textcolor-white align-center ">DONATE</h2>
+                </a>
+            </div>
+                        
+            <div class="col-sm-6 arrow-button padding-left-40px padding-top-100px padding-right-40px">
+                <br/><br/>
+                <a href="#">
+                    <img class="bgimage-arrow" src="css/img/arrow-up.png"/>
+                </a>
+            </div>
+        </div>     
+        
+        
+        
+        <div class="footer-block bgcolor-black padding-top-100px padding-bottom-100px">
+        
+            <div class="container">
+                <div class="col-sm-3">
+                    <h2 class="textcolor-white">CONTACT US</h2>
+                    
+                    <div class="spacer-xs"></div>
+                    <div class="spacer-xs"></div>
+                    
+                    <img class="icon_contact float-left margin-right-20px" src="css/img/icons/call.png"/><p class="textcolor-white">(714) 494-3090</p>
+                    
+                    <div class="spacer-xs"></div>
+                    
+                    <img class="icon_contact float-left margin-right-20px" src="css/img/icons/email.png"/><p class="textcolor-white">filipinoculturalschool@gmail.com</p>
+                    
+                    <div class="spacer-xs"></div>
+                    
+                    <img class="icon_contact float-left margin-right-20px" src="css/img/icons/address.png"/><p class="textcolor-white">PO Box 1993 Norwalk CA 90650</p>
+                </div>
+
+                
+                <div class="col-sm-2">
+                    <h2 class="textcolor-white">SITEMAP</h2>
+                    
+                    <div class="spacer-xs"></div>
+                    <div class="spacer-xs"></div>
+                    
+                    <li class="liststyle-none"><a href="index.html"><p class="textcolor-white">HOME</p></a></li>
+                    
+                    <li class="liststyle-none"><a href="ourstory.html"><p class="textcolor-white">OUR STORY</p></a></li>
+                    
+                    <li class="liststyle-none"><a href="ourfamily.html"><p class="textcolor-white">OUR FAMILY</p></a></li>
+                    
+                    <li class="liststyle-none"><a href="joinus.html"><p class="textcolor-white">JOIN US</p></a></li>
+                    
+                    <li class="liststyle-none"><a href="summer.html"><p class="textcolor-white">SUMMER</p></a></li>
+                    
+                    <li class="liststyle-none"><a href="#"><p class="textcolor-white">BLOG</p></a></li>
+                    
+                    
+                    
+                </div>
+                
+                <div class="col-sm-4">
+                    
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8USALBQKKVNFJ" target="_blank">
+                        <img class="button-donate" src="css/img/button-donate.png"/>
+                    </a>
+                
+                </div>
+                
+                <div class="col-sm-3">
+                     <!-- Begin MailChimp Signup Form -->
+                <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                <style type="text/css">
+                    #mc_embed_signup{ clear:left; font:14px lato,Arial,sans-serif; width:100%;}
+                    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                </style>
+             
+            <form action="//facebook.us3.list-manage.com/subscribe/post?u=04b6a14a798f7f12ec6a139d2&amp;id=1c3c0f5aca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+
+
+                <h2 class="textcolor-white">MAILING LIST</h2><br/>
+
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Please enter email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_04b6a14a798f7f12ec6a139d2_1c3c0f5aca" tabindex="-1" value=""></div>
+                <div class="clear"><br/><div class="spacer-xs"></div><input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+
+<!--End mc_embed_signup-->
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!--    FCS Navbar CSS     -->
+        <link href="css/footer.css" type="text/css" rel="stylesheet">
+         <!--    FCS Navbar CSS     -->
+        <link href="css/mobile-footer.css" type="text/css" rel="stylesheet">
+        
+    </body>
+    
+</html>
+
